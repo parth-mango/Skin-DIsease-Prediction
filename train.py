@@ -21,7 +21,7 @@ TRAIN_FOLDER = os.path.abspath('/content/images/train_emb')
 TEST_FOLDER = os.path.abspath('/content/images/test_emb')
 
 
-def save_checkpoint(state, is_best, folder='/content/derm-ai/new_models', filename='checkpoint.pth.tar'):
+def save_checkpoint(state, is_best, folder='/content/new_models', filename='checkpoint.pth.tar'):
     torch.save(state, os.path.join(folder, filename))
     if is_best:
         shutil.copyfile(os.path.join(folder, filename),
